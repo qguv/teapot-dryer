@@ -2,7 +2,7 @@ rule render3d
     command = openscad -o $out $in
 
 rule render2d
-    command = openscad -D PNG=1 -o $out $in
+    command = openscad -D PNG=1 --colorscheme BeforeDawn -o $out $in
 
 build teapot-dryer.3mf: render3d teapot-dryer.scad | BOSL2/std.scad
 build teapot-dryer.stl: render3d teapot-dryer.scad | BOSL2/std.scad
