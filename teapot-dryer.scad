@@ -30,6 +30,8 @@ module all() {
 }
 
 $vpd = 362;
+$vpt = [6, 0, 57];
+$vpr = [76, 0, 284];
 $fn=20;
 //$fn=(PNG || !$preview) ? 90 : 20;
 $slop = 0.2;
