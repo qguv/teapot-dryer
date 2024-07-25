@@ -14,11 +14,12 @@ Top_outer_diameter = 20;
 Bottom_outer_diameter = 50;
 
 module all() {
-    stroke_height = Height - Tube_diameter;
+    stroke_height = Height - Tube_diameter/2;
     leg_separation_angle = 360 / Legs;
     first_leg = leg_separation_angle / 2;
     rotations = [for (i=[0:(ceil(Legs/2)-1)]) first_leg + i * leg_separation_angle];
-    translate([0, 0, Tube_diameter / 2])
+
+    top_half()
     yflip_copy()
     zrot_copies(rotations)
     stroke(
